@@ -2,7 +2,9 @@
 ### Baekjoon OJ 문제 풀이 | 7일 5백준을 향해🌱
 <br />
 
-[![solved.ac tier](http://mazassumnida.wtf/api/v2/generate_badge?boj={myris2})](https://solved.ac/{myris2})
+[![solved.ac tier](http://mazassumnida.wtf/api/generate_badge?boj=myris2)](https://solved.ac/myris2)
+
+[![solved.ac tier](http://mazassumnida.wtf/api/v2/generate_badge?boj=myris2)](https://solved.ac/myris2)
 
 **사용 언어**
 - Python
