@@ -14,4 +14,3 @@ member.sort(key=lambda x: (x[0]))
 
 for i in range(N):
     print(member[i][0], member[i][1])
-
