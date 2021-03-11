@@ -3,37 +3,27 @@ import sys
 input = sys.stdin.readline
 
 N = int(input())
+data = list(map(int, input().split()))
 
-seq = list(map(int, input().split()))
+dp = [1] * N
 
-print(seq)
+for i in range(N):
+    for j in range(i):
+        if data[j] < data[i]:
+            dp[i] = max(dp[i], dp[j] + 1)
 
-tmp = seq[0]
-min = 1000
-next = -1
-data = []
-start = 0
+data.reverse()
+dp2 = [0] * N
 
-while (start < len(seq) - 1):
-    print('시작 >>', start, '번째 -', seq[start])
-    tmp = seq[start]
-    min = 1000
-    hasUp = False #상승하는 값 있는 경우
-    nextIdx = -1
-    for i in range(start + 2, len(seq)):
-        diff = seq[i] - tmp
-        if min > diff and diff > 0:
-            min = diff
-            nextIdx = i
-            hasUp = True
-            data.append()
-    if hasUp:
-        start = nextIdx
-    else:
+for i in range(N):
+    for j in range(i):
+        if data[j] < data[i]:
+            dp2[i] = max(dp2[i], dp2[j] + 1)
 
-        break
+dp2.reverse()
+dp3 = []
 
-    #print('다음 >>', nextIdx, '번째 -', seq[nextIdx])
-    print()
-    #start = nextIdx
+for i in range(N):
+    dp3.append(dp[i] + dp2[i])
 
+print(max(dp3))
