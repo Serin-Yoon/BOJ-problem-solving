@@ -1,5 +1,5 @@
-# BOJ-problem-solving
-### Baekjoon OJ 문제 풀이
+# algorithm-study
+### 알고리즘 문제 풀이
 <br />
 
 [![solved.ac tier](http://mazassumnida.wtf/api/v2/generate_badge?boj=myris2)](https://solved.ac/myris2)
