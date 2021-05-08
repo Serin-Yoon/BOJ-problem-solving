@@ -10,7 +10,8 @@ def solution(food_times, K):
         i += 1
         if i >= len(food_times):
             i -= len(food_times)
-    return(time - K)
+
+    return time - K
 
 food_times = list(map(int, input().split()))
 K = int(input())

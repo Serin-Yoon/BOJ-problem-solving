@@ -1,6 +1,5 @@
 S = list(map(int, input()))
 
-print(S)
 cnt1 = 0
 cnt2 = 0
 
