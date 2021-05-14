@@ -8,7 +8,7 @@ def solution(N, stages):
         fail[stage - 1] += 1
 
     # stage 별 실패율 구하기
-    for i in range(N + 1):
+    for i in range(N):
         if fail[i] == 0:
             failRate.append([i + 1, 0])
         else:
@@ -17,13 +17,12 @@ def solution(N, stages):
             people -= fail[i]
 
     # 실패율 높은 순, stage 번호 낮은 순 재정렬
-    failRate = sorted(failRate, key = lambda x : (-x[1], x[0]))[1:]
+    failRate = sorted(failRate, key = lambda x : (-x[1], x[0]))
 
-    # stage만 출력
-    for rate in failRate:
-        print(rate[0])
+    # 실패율 제거, stage 번호만 남김
+    for i in range(len(failRate)):
+        failRate[i] = failRate[i][0]
 
-    return
+    return failRate
 
-
-solution(5, [2, 1, 2, 6, 2, 4, 3, 3])
+solution(4, [4, 4, 4, 4, 4])
